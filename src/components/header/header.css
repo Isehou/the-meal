@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background-color: var(--white-color);
+  color: var(--white-color);
+}
+.header-wrapper {
+  font-size: 16pt;
+}
+
+.header-wrapper a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+.header-wrapper a:hover {
+  transform: scale(0.8);
+  text-decoration: underline;
+}
+.link {
+  padding: 50px;
+}
