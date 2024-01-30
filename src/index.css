@@ -18,7 +18,8 @@ code {
 }
 :root {
   --black-color: #100f0f;
-  --white-color: #e2dcc8;
+  --white-color: #fff;
+  --yellow-color: #d49726;
   --primary-color: #0f3d3e;
   --box-shadow: 0px 10px 20px 0px rgba(95, 95, 95, 0.3);
 }

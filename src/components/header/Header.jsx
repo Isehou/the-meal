@@ -10,9 +10,9 @@ function Header() {
         <Link className="link" to="/">
           The Meal
         </Link>
-        <Link className="link" to="/products-detail">
+        {/* <Link className="link" to="/products-detail">
           Products Details
-        </Link>
+        </Link> */}
         <Link className="link" to="/about">
           About
         </Link>

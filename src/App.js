@@ -2,8 +2,9 @@ import React from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
+import ProductPage from "./pages/ProductPage";
 import AboutPage from "./pages/AboutPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   const navigate = useNavigate();
@@ -13,8 +14,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/products-detail" element={<ProductDetailsPage />}></Route>
+        <Route path="/products:id" element={<ProductPage />}></Route>
         <Route path="/about" element={<AboutPage />}></Route>
+        <Route path="/*" element={<NotFoundPage />}></Route>
       </Routes>
     </div>
   );
