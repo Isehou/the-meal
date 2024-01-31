@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/the meal logo_white.svg";
 
 import "./header.css";
 
@@ -8,14 +9,11 @@ function Header() {
     <div className="header">
       <div className="header-wrapper">
         <Link className="link" to="/">
-          The Meal
+          <img className="logo" src={Logo} alt="" />
         </Link>
-        {/* <Link className="link" to="/products-detail">
-          Products Details
-        </Link> */}
-        <Link className="link" to="/about">
+        {/* <Link className="link" to="/about">
           About
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

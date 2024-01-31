@@ -5,20 +5,26 @@
   height: 80px;
   background-color: var(--yellow-color);
   color: var(--white-color);
+  padding: 0 70px;
 }
 .header-wrapper {
-  font-size: 16pt;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15pt;
 }
 
 .header-wrapper a {
-  margin-left: 50px;
   text-decoration: none;
-  color: var(--black-color);
+  color: var(--white-color);
 }
 .header-wrapper a:hover {
-  transform: scale(0.8);
   text-decoration: underline;
 }
+.logo {
+  width: 250px;
+}
 .link {
-  /* padding: 10px; */
 }

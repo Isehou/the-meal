@@ -11,15 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap");
 
 * {
   box-sizing: border-box;
+  font-family: "Cardo", serif;
 }
 :root {
   --black-color: #100f0f;
   --white-color: #fff;
   --yellow-color: #d49726;
   --primary-color: #0f3d3e;
-  --box-shadow: 0px 10px 20px 0px rgba(95, 95, 95, 0.3);
+  --box-shadow: 10px 12px 29px -14px rgba(0, 0, 0, 0.75);
 }
