@@ -19,6 +19,7 @@ a::after {
   width: 100%;
   font-size: 22pt;
   margin: 30px 0;
+  padding: 20px;
   font-weight: 600;
 }
 .products-wrapper {
@@ -35,8 +36,8 @@ a::after {
 .random-generate__title {
   color: var(--yellow-color);
   margin: 0;
-  font-size: 30pt;
-  font-weight: 500;
+  font-size: 28pt;
+  font-weight: 600;
 }
 .title-block a:hover {
   text-decoration: underline;

@@ -11,14 +11,9 @@ function HomePage() {
 
   const dispatch = useDispatch();
   const { meals } = useSelector((state) => state.randomMeal);
-  // console.log('meals', meals);
 
   useEffect(() => {
     dispatch(fetchRandomMeal());
-  }, [dispatch]);
-
-  useEffect(() => {
-    dispatch(fetchSearchByName());
   }, [dispatch]);
 
   return (
@@ -27,7 +22,7 @@ function HomePage() {
       {meals.map((elem) => (
         <section className="products-wrapper" key={elem.idMeal}>
           <div className="title-block">
-            <Link className="link" to="/products/:id">
+            <Link className="link" to="/products/{elem.idMeal}">
               <h1 className="random-generate__title">{elem.strMeal}</h1>
             </Link>
             <div className="subtitle">
@@ -46,7 +41,10 @@ function HomePage() {
       ))}
 
       <h2 className="static__title">Find your Meal</h2>
-      <form className="search-block section-style">
+      <form
+        className="search-block section-style"
+        onChange={() => fetchSearchByName()}
+      >
         <input
           type="search"
           value={search}
