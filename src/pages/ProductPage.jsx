@@ -33,7 +33,7 @@ function ProductPage() {
           <div className="instruction">
             <h2 className="static__title">Instruction</h2>
             <div className="meal-description">{elem.strInstructions}</div>
-            <a className="meal-youtube" href={elem.strYoutube}>
+            <a className="meal-youtube" target="_blank" href={elem.strYoutube}>
               Watch on YouTube
             </a>
           </div>
