@@ -6,21 +6,32 @@ export const fetchSearchByName = createAsyncThunk(
   async () => {
     const response = await fetch(SEARCH_MEAL);
     const data = await response.json();
-    console.log(data);
     return data;
   }
 );
 
+const initialState = {
+  meals: [
+    {
+      idMeal: "id",
+      strMeal: "name",
+      strCategory: "category",
+      strArea: "nations",
+      strInstructions: "description",
+      strMealThumb: "images-links",
+      strTags: "tags",
+      strYoutube: "youtube-links",
+    },
+  ],
+};
+
 const searchByNameSlice = createSlice({
   name: "searchByName",
-  initialState: {
-    searchTerm: "",
-  },
-  reducers: {
-    fetchSearchByName(state, action) {
-      state.status = "success";
-      state.meals = action.payload;
-    },
+  initialState,
+  extraReducers: (builder) => {
+    builder.addCase(fetchSearchByName.fulfilled, (state, action) => {
+      state.meals = action.payload.meals;
+    });
   },
 });
 

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRandomMeal } from "../../store/slices/randomMealSlice";
+import { fetchRandomMeal } from "../store/slices/randomMealSlice";
 
-import "../pages-setting.css";
-import "./home-page.css";
+import "./page-setting.css";
 
 function HomePage() {
   const dispatch = useDispatch();
   const { meals } = useSelector((state) => state.randomMeal);
-  console.log(meals);
+  // console.log(meals);
 
   useEffect(() => {
     dispatch(fetchRandomMeal());
@@ -18,19 +18,22 @@ function HomePage() {
     <div className="home-page pages">
       <h2 className="static__title">Meal of the Day</h2>
       {meals.map((elem) => (
-        <section className="products-wrapper section-style" key={elem.idMeal}>
-          <div className="text-block">
-            <h1 className="random-generate__title">{elem.strMeal}</h1>
-            <div className="type__subtitle">
-              <span className="type__subtitle-category">
-                {elem.strCategory}
+        <section className="products-wrapper" key={elem.idMeal}>
+          <div className="title-block">
+            <Link className="link" to="/products:id">
+              <h1 className="random-generate__title">{elem.strMeal}</h1>
+            </Link>
+            <div className="subtitle">
+              <span className="subtitle-category">
+                <pre>
+                  {elem.strCategory} || {elem.strArea}
+                </pre>
               </span>
-              ||
-              <span className="type__subtitle-category">{elem.strArea}</span>
+              <div className="ingredients"></div>
             </div>
           </div>
-          <div className="img-block">
-            <img className="img" src={elem.strMealThumb} alt="#" />
+          <div className="meal-img-block">
+            <img className="img" src={elem.strMealThumb} alt="" />
           </div>
         </section>
       ))}

@@ -11,9 +11,6 @@ function Header() {
         <Link className="link" to="/">
           <img className="logo" src={Logo} alt="" />
         </Link>
-        {/* <Link className="link" to="/about">
-          About
-        </Link> */}
       </div>
     </div>
   );

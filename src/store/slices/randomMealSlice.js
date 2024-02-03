@@ -4,10 +4,8 @@ import { RANDOM_MEAL, getRandomMeal } from "../../services/dataService";
 export const fetchRandomMeal = createAsyncThunk(
   "randomMeal/fetchRandomMeal",
   async () => {
-    // const response = await getRandomMeal();
     const response = await fetch(RANDOM_MEAL);
     const data = await response.json();
-    console.log(data);
     return data;
   }
 );
@@ -30,10 +28,10 @@ const initialState = {
 const randomMealSlice = createSlice({
   name: "randomMeal",
   initialState,
-  reducers: {
-    fetchRandomMeal(state, action) {
-      state.meals = action.payload;
-    },
+  extraReducers: (builder) => {
+    builder.addCase(fetchRandomMeal.fulfilled, (state, action) => {
+      state.meals = action.payload.meals;
+    });
   },
 });
 
