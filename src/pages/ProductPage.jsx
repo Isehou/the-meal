@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDetailsMeal } from "../store/slices/detailsMealSlice";
+import { fetchSearchByName } from "../store/slices/searchByNameSlice";
 
 import "./page-setting.css";
 
@@ -32,7 +33,7 @@ function ProductPage() {
           </div>
           <div className="instruction">
             <h2 className="static__title">Instruction</h2>
-            <div className="meal-description">{elem.strInstructions}</div>
+            <ul className="meal-description">{elem.strInstructions}</ul>
             <a className="meal-youtube" target="_blank" href={elem.strYoutube}>
               Watch on YouTube
             </a>

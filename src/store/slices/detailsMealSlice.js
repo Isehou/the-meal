@@ -21,7 +21,6 @@ const initialState = {
       strMealThumb: "images-links",
       strTags: "tags",
       strYoutube: "youtube-links",
-      strInstructions: "instructions",
     },
   ],
 };

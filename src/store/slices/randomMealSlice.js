@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { RANDOM_MEAL, getRandomMeal } from "../../services/dataService";
+import { RANDOM_MEAL } from "../../services/dataService";
 
 export const fetchRandomMeal = createAsyncThunk(
   "randomMeal/fetchRandomMeal",
@@ -17,10 +17,7 @@ const initialState = {
       strMeal: "name",
       strCategory: "category",
       strArea: "nations",
-      strInstructions: "description",
       strMealThumb: "images-links",
-      strTags: "tags",
-      strYoutube: "youtube-links",
     },
   ],
 };
