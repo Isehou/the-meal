@@ -9,9 +9,9 @@ import { useIngredients } from "../hooks/useIngredients";
 function DetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
-  const ingredients = useIngredients(meals);
-
   const { meals } = useSelector((state) => state.randomMeal);
+
+  const ingredients = useIngredients(meals);
 
   useEffect(() => {
     dispatch(fetchDetailsMeal());
