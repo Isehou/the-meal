@@ -43,7 +43,7 @@ Consolidate the acquired knowledge in React and develop a thematic website for r
 
 <h5>1. Clone the repository:<h5>
 
-    git clone SOON...
+    gh repo clone Isehou/neobis-front-themeal
 
 <h2>Contact</h2>
 
