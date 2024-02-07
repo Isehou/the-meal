@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { DETAILS_MEAL } from "../../services/dataService";
 
@@ -21,6 +22,7 @@ const initialState = {
       strMealThumb: "images-links",
       strTags: "tags",
       strYoutube: "youtube-links",
+      strIngredient: "ingredients",
     },
   ],
 };

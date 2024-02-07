@@ -1,3 +1,4 @@
+import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { SEARCH_MEAL } from "../../services/dataService";
 
@@ -11,18 +12,7 @@ export const fetchSearchByName = createAsyncThunk(
 );
 
 const initialState = {
-  meals: [
-    {
-      idMeal: "id",
-      strMeal: "name",
-      strCategory: "category",
-      strArea: "nations",
-      strInstructions: "description",
-      strMealThumb: "images-links",
-      strTags: "tags",
-      strYoutube: "youtube-links",
-    },
-  ],
+  meals: [],
 };
 
 const searchByNameSlice = createSlice({

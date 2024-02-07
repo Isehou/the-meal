@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
-import ProductPage from "./pages/ProductPage";
+import DetailsPage from "./pages/DetailsPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
@@ -14,7 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />}></Route>
-        <Route path="/products/:id" element={<ProductPage />}></Route>
+        <Route path={`/products/:id`} element={<DetailsPage />}></Route>
         <Route path="/about" element={<AboutPage />}></Route>
         <Route path="/*" element={<NotFoundPage />}></Route>
       </Routes>

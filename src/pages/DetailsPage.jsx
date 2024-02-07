@@ -1,17 +1,23 @@
+import "./page-setting.css";
+
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDetailsMeal } from "../store/slices/detailsMealSlice";
-import { fetchSearchByName } from "../store/slices/searchByNameSlice";
+import { useParams } from "react-router-dom";
+import { useIngredients } from "../hooks/useIngredients";
 
-import "./page-setting.css";
-
-function ProductPage() {
+function DetailsPage() {
+  const { id } = useParams();
   const dispatch = useDispatch();
+  const ingredients = useIngredients(meals);
+
   const { meals } = useSelector((state) => state.randomMeal);
 
   useEffect(() => {
     dispatch(fetchDetailsMeal());
-  }, [dispatch]);
+  }, [id, dispatch]);
+
+  useEffect(() => {}, [meals]);
 
   return (
     <div className="product-page pages">
@@ -25,7 +31,11 @@ function ProductPage() {
                   {elem.strCategory} || {elem.strArea}
                 </pre>
               </span>
-              <div className="ingredients">{}</div>
+              <ul className="ingredients">
+                {ingredients[elem.idMeal].map((ingredient, index) => (
+                  <li key={ingredient + index}>{ingredient}</li>
+                ))}
+              </ul>
             </div>
           </div>
           <div className="meal-img-block">
@@ -33,7 +43,7 @@ function ProductPage() {
           </div>
           <div className="instruction">
             <h2 className="static__title">Instruction</h2>
-            <ul className="meal-description">{elem.strInstructions}</ul>
+            <div className="meal-description">{elem.strInstructions}</div>
             <a className="meal-youtube" target="_blank" href={elem.strYoutube}>
               Watch on YouTube
             </a>
@@ -44,4 +54,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default DetailsPage;
