@@ -3,12 +3,14 @@
   align-items: center;
   justify-content: center;
   padding: 0 100px;
+
   width: 100%;
   height: 80px;
   background-color: var(--yellow-color);
   color: var(--white-color);
 
   &__wrapper {
+    max-width: 1400px;
     display: flex;
     align-items: center;
     width: 100%;

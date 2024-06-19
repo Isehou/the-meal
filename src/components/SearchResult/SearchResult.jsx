@@ -1,4 +1,5 @@
 import React from "react";
+import "./ui/search-result.css";
 
 function SearchResult({ list }) {
   return (

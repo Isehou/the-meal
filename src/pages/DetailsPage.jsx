@@ -1,10 +1,10 @@
-import "./page-setting.css";
-
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchDetailsMeal } from "../store/slices/detailsMealSlice";
 import { useParams } from "react-router-dom";
 import { useIngredients } from "../hooks/useIngredients";
+
+import "./ui/page-setting.css";
 
 function DetailsPage() {
   const { id } = useParams();

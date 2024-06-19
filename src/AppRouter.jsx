@@ -1,10 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/Home-page/HomePage";
 import DetailsPage from "./pages/DetailsPage";
 import AboutPage from "./pages/AboutPage";
-import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import NotFoundPage from "./pages/not-found-page/NotFoundPage";
 
 function AppRouter() {
   return (
